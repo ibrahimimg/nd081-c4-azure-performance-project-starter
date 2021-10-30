@@ -25,11 +25,11 @@ from opencensus.ext.flask.flask_middleware import FlaskMiddleware
 
 # Application Insight connection_string
 connection_string = "InstrumentationKey=cd6c9b6f-b50e-40ca-a92b-a753ad3023ab;IngestionEndpoint=https://westus-0.in.applicationinsights.azure.com/"
-
+"""
 # Custom Events
 config_integration.trace_integrations(['logging'])
 config_integration.trace_integrations(['requests'])
-
+"""
 # Logging
 # Setup logger
 logger = logging.getLogger(__name__) 
