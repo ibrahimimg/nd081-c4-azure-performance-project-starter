@@ -24,7 +24,7 @@ from opencensus.trace.tracer import Tracer
 from opencensus.ext.flask.flask_middleware import FlaskMiddleware
 
 # Application Insight connection_string
-connection_string = "InstrumentationKey=cd6c9b6f-b50e-40ca-a92b-a753ad3023ab;IngestionEndpoint=https://westus-0.in.applicationinsights.azure.com/"
+connection_string = "InstrumentationKey=645984bd-935b-4879-97f1-915b5cf05b84;IngestionEndpoint=https://westus-0.in.applicationinsights.azure.com/"
 """
 # Custom Events
 config_integration.trace_integrations(['logging'])
