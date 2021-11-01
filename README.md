@@ -1,6 +1,7 @@
 # Enhancing Applications
 
 In this project, you will apply the skills you have acquired in the Azure Performance course to collect and display performance and health data about an application. This is only half the battle; the other half is making informed decisions about the data and automating remediation tasks. You will use a combination of cloud technologies, such as Azure Kubernetes Service, VM Scale Sets, Application Insights, Azure Log Analytics, and Azure Runbooks to showcase your skills in diagnosing and rectifying application and infrastructure problems.
+![vmss-insight](submission-screenshots/autoscaling-vmss/4.4-VMSS-instance-metrices.png)
 
 In this project, you'll be tasked to do the following:
 
@@ -361,31 +362,46 @@ The script above will take a few minutes to create VMSS and related resources. O
 2. Screenshots for the kubernetes cluster which include:
    **Note**: Place all screenshots for Kubernetes Cluster in the `submission-screenshots/kubernetes-cluster` directory
    - The output of the Horizontal Pod Autoscaler, showing an increase in the number of pods.
+   ![hpa-output](submission-screenshots/kubernetes-cluster/3.1-hpa-output.png)
    - The Application Insights metrics which show the increase in the number of pods.
+   ![aks-cluster-insight](submission-screenshots/kubernetes-cluster/3.2-AKS-cluster-insights-metrices.png)
    - The email you received from the alert when the pod count increased.
+   ![email-alert](submission-screenshots/kubernetes-cluster/3.3-azure-monitor-email.png)
 
 
 3. Screenshots for the Application Insights which include:
    **Note**: Place all screenshots for Application Insights in the `submission-screenshots/application-insights` directory
    - The metrics from the VM Scale Set instance--this will show CPU %, Available Memory %, Information about the Disk, and information about the bytes sent and received. There will be 5 graphs which display this data.
+   ![vmss-insight](submission-screenshots/application-insights/2.1-insight.png)
    - Application Insight Events which show the results of clicking 'vote' for each 'Dogs' & 'Cats'
+   ![app-insight-events](submission-screenshots/application-insights/2.2-events.png)
    - The output of the `traces` query in Azure Log Analytics.
+   ![traces-output](submission-screenshots/application-insights/2.3-traces.png)
    - The chart created from the output of the `traces` query.
+   ![app-insight-charts](submission-screenshots/application-insights/2.4.01.png)
 
 
 4. Screenshots for the Autoscaling of the VM Scale Set which include:
    **Note**: Place all screenshots for Autoscaling VMSS in the `submission-screenshots/autoscaling-vmss` directory
    - The conditions for which autoscaling will be triggered (found in the 'Scaling' item in the VM Scale Set).
+   ![autoscaling-conditions](submission-screenshots/autoscaling-vmss/4.1-auto-scaling.png)
    - The Activity log of the VM scale set which shows that it scaled up with timestamp.
+   ![activity-log](submission-screenshots/autoscaling-vmss/4.2-activity-log.png)
    - The new instances being created.
+   ![after-scaling](submission-screenshots/autoscaling-vmss/4.3-after-scaling.png)
    - The metrics which show the load increasing, then decreasing once scaled up with timestamp.
+   ![vmss-metrices](submission-screenshots/autoscaling-vmss/4.4-metrices.png)
 
 
 5. Screenshots for the Azure Runbook which include:
    **Note**: Place all screenshots for RunBook in the `submission-screenshots/runbook` directory
    - The alert configuration in Azure Monitor which shows the resource, condition, action group (this should include a reference to your Runbook), and alert rule details (may need 2 screenshots).
+   ![runbook-condition](submission-screenshots/runbook/5.1.1-condition.png)
+   ![runbook-actions](submission-screenshots/runbook/5.1.2-rule-actions-runbook.png)
+   ![runbook-alert-rule](submission-screenshots/runbook/5.1.3.2-alert-rule2.png)
    - The email you received from the alert when the Runbook was executed.
    - The summary of the alert which shows 'why did this alert fire?', timestamps, and the criterion in which it fired.
+   ![runbook-email-alert](submission-screenshots/runbook/5.2-azure-monitor-email.png)
 
 --- 
 ### Built With
